@@ -1,0 +1,112 @@
+/* body *{box-shadow: 0 0 15px gold;} */
+/* 以便觀察各區塊的排版 */
+.index-bg {background-image: url(./images/0101.jpg);}/* 載入首頁背景圖 */
+.content{
+  width: 1024px;  height: 768px;   /* 設定外層整體容器的寬高 */
+  margin:10px auto;                /* 置中對齊 */
+  background-size: cover;         /* 使地圖配合版面 */
+  position: relative;           /* 以便子層以position排版 */
+  font-family: 微軟正黑體;    /* 先預設本頁主要的字形、大小、顏色、置中 */
+  text-align: center;         /* 後續各區若有不同者，再單獨修改屬性 */
+  font-size: 16px;
+  color: white;
+}
+.content>*{position: absolute;} /* 設定子層以position排版 */
+
+/* ==============================header */
+header{
+  left: 120px;  top: 86px;      /* 頁首區定位 */
+  width: 757px;
+  display: flex;                /* 頁首區以flex方式進行排版 */
+}
+header>div>section{   /* 每一小區的上半塊高度相同 */
+  height: 112px;
+}
+.logo1>section{       /* 第一小區上半塊 */
+  font-size: 53.5px;
+  font-weight: bold;
+  line-height: 53.5px;
+}
+.logo1>section>div{   /* 第一小區上半塊第1行需作分散對齊，並限行高 */
+  text-align: justify;
+  height: 58px;
+}
+.logo1>section>div:after{/* 第一小區上半塊第1行分散對齊的補充 */
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+marquee{        /* 跑馬灯區 */
+  width: 370px;
+  font-size: 14px;
+  color: #DCA7A7;
+}
+.logo2{
+  flex-grow: 1;     /* 剩餘空間則由此小區填滿 */  
+}
+.logo2>section{
+  width: 55px;
+  margin: auto;
+}
+.logo2 img{
+  width: 53px;  height: 53px;
+}
+.logo3{
+  width: 252px;
+  font-size: 14px;
+  text-align: left;
+}
+/* ==========================================aside */
+aside{
+  top: 527px;                  /* 日期區定位 */
+  width: 120px;  height: 50px;
+}
+aside>div{
+  color: #898989;
+}
+footer{
+  bottom: 0;                  /* 頁尾區定位 */
+  width: 1024px;  height: 25px;
+  color: #DCA7A7;
+}
+/* ========================================== 主頁index的內容區設定 */
+main {
+  left: 120px;  top: 323px;      /* 內容區定位 */
+  width: 757px;  height: 315px;
+}
+nav {
+  width: 25px;
+  float: left;          /* 以float浮動排版 */
+  margin-top: 70px;
+}
+article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+article>* {
+  width: 215px;
+  font-size: 33px;
+  font-weight: bold;
+}
+article>section {
+  height: 226px;
+  line-height: 226px;
+}
+article>div {
+  height: 85px;
+  line-height: 85px;
+}
+article a {
+  color: white;
+  text-decoration: none;
+}
+article *:hover {
+  color: #00b3b7;
+}
+/* ===================================以下為 main.html 使用 */
+.main-bg{background-image: url(./images/0106.jpg);}
+iframe{
+  left: 120px;  top: 292px;
+  width: 760px;  height: 425px;
+}
