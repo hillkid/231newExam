@@ -18,6 +18,7 @@ header{
   left: 120px;  top: 86px;      /* 頁首區定位 */
   width: 757px;
   display: flex;                /* 頁首區以flex方式進行排版 */
+  justify-content: space-between;
 }
 header>div>section{   /* 每一小區的上半塊高度相同 */
   height: 112px;
@@ -41,12 +42,12 @@ marquee{        /* 跑馬灯區 */
   font-size: 14px;
   color: #DCA7A7;
 }
-.logo2{
-  flex-grow: 1;     /* 剩餘空間則由此小區填滿 */  
-}
+/* .logo2{  flex-grow: 1;} */
+     /* 剩餘空間則由此小區填滿，改用betwen處理，故不需再grow */  
+
 .logo2>section{
   width: 55px;
-  margin: auto;
+  /* margin: auto; */
 }
 .logo2 img{
   width: 53px;  height: 53px;
