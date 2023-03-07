@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="zh">
+<head><meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+<title>  </title>
+<style>
+  .lightbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+    background-color: #00000099;
+    /* background-color: rgba(0,0,0, 0.6); */
+    z-index: -1;
+    opacity: 0;
+  }
+  .lightbox:target {
+    z-index: 1;
+    opacity: 1;
+    transition: 0.5s;
+  }
+  main img{
+    width: 80vw;
+    /* z-index: 2; */
+  }
+/* =================================== */
+.article:target{
+  background: yellow;
+}
+/* -------------------- */
+  .modal{
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  padding: #fff;
+  box-shadow: 0 0 10px #333;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  display: none;
+  }
+  .modal:target{
+    display: block;
+  }
+  header{
+    height: 20px;
+  }
+  header a{
+    position: fixed;
+    right: 10px;
+  }
+</style>
+</head>
+
+
+<body><div class="wrap container">
+  <div class="row">
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#">no</a>
+    <div class="article" id="home">this is home content</div>
+    <div class="article" id="shop">this is shop content</div>
+  </div>
+  <div class="row">
+    <a href="#modal">open</a>
+    <div class="modal" id="modal">
+      <header>
+        <a href="#">X</a>
+      </header>
+        this is content
+    </div>
+  </div>
+
+  <div class="list row border">
+    <a href="#show_1" class="col"><img class="img-fluid" src="../images/0508.jpg"></a>
+    <a href="#show_2" class="col"><img class="img-fluid" src="../images/0509.jpg"></a>
+    <a href="#show_3" class="col"><img class="img-fluid" src="../images/0510.jpg"></a>
+    <a href="#show_4" class="col"><img class="img-fluid" src="../images/0511.jpg"></a>
+    <a href="#show_5" class="col"><img class="img-fluid" src="../images/0512.jpg"></a>
+  </div>
+
+
+<main>
+  <a href="#" class="lightbox fixed-top" id="show_1">
+    X<img src="../images/0508.jpg">
+  </a>
+  <a href="#" class="lightbox" id="show_2">
+    <img src="../images/0509.jpg">
+  </a>
+  <a href="#" class="lightbox" id="show_3">
+    <img src="../images/0510.jpg">
+  </a>
+  <a href="#" class="lightbox" id="show_4">
+    <img src="../images/0511.jpg">
+  </a>
+  <a href="#" class="lightbox" id="show_5">
+    <img src="../images/0512.jpg">
+  </a>
+</main>
+
+</div></body></html>

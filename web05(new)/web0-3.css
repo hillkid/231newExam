@@ -1,0 +1,94 @@
+body * {
+  box-sizing: border-box; /* 使 box 空間計算上不易受影響 */
+  /* box-shadow: 0 0 5px black; */
+    /* 以便觀察各區塊的排版 */
+}
+body {
+  background-color: #e7e7e7;
+}
+.content {
+  width: 1024px;  height: 768px;
+  margin: auto;                   /* 水平置中 */
+  background-color: white;
+  box-shadow: 0 0 5px black;
+}
+.header {
+  width: 1024px;  height: 300px;
+  background-color: #6cc;
+  display: flex;
+  align-items: end;
+}
+.pic1 {
+  width: 176px;  height: 176px;
+  margin-left: 110px;
+}
+.pic2 {
+  width: 60px;  height: 60px;
+  margin-left: 400px;
+  margin-bottom: 120px;
+}
+.logobar {
+  font-size: 45px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+.logo1 {  color: #fff;}
+.logo2 {  color: #2b8280;}
+.logo3 {  color: #702b82;}
+.logo4 {  color: #ff997c;}
+.logo5 {  color: #827f52;}
+/* ===========================   aside   ==== */
+.aside {
+  width: 300px;
+  float: left;          /* 採用float排版 */
+}
+.nav,.footer {       /* 同時設定選單區和頁尾區 */
+  width: 180px;
+  margin: 46px 15px 46px auto;  /* 調整位置 */
+}
+.nav {
+  font-size: 36px;
+}
+a {
+  color: #6cc;
+  text-decoration: none;  /* 去除底線 */
+}
+.nav a {
+  line-height: 3.5rem;    /* 調整行高 */
+}
+.nav a:hover {
+  color: #ff997c;
+}
+.footer {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 新細明體;
+  color: #f00;
+}
+/* ============================   main   === */
+.main {
+  width: 600px;
+  padding-top: 46px;    /* 設置頂端內距 */
+  display: flex;        /* 以FLEX進行排版 */
+  flex-wrap: wrap;
+}
+.main>div{
+  margin: 0 40px 40px 0;  /* 每個 div 右側與底部外距的設定 */
+}
+.main img {
+  width: 160px;
+  height: 120px;
+  border: 10px #e7e7e7 solid;
+}
+.main>div:hover {
+  transform: scale(1.2);    /* 滑鼠滑過時放大的特效 */
+  transition: 1.2s;       /* 設定特效發生時間 */
+}
+.main img:hover {
+  border-color: #ff997c;  /* 滑鼠滑過時特效 */
+}
+figcaption {      /* 圖片說明文字屬性設定 */
+  font-size: 20px;
+  color: #66cccc;
+  text-align: center;
+}

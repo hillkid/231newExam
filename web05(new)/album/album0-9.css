@@ -1,0 +1,155 @@
+body * {
+  box-sizing: border-box;     /* 使 box 空間計算上不易受影響 */
+  /* box-shadow: 0 0 5px black;      */
+  /* 以便觀察各區塊的排版 */
+}
+body {
+  background-color: #e7e7e7;
+}
+.content {
+  width: 1024px;  height: 768px;
+  margin: 0 auto;                 /* 水平置中 */
+  background-color: white; /* 將底色設為白色 */
+  background-image: linear-gradient(#6cc, #6cc);
+  /* 在白底色上，加上藍綠色的色塊 */
+  background-size: 1024px 300px; /* 藍綠色塊的大小 */
+  background-repeat:no-repeat;
+  display: flex; /* 整體以flex排版 */
+  flex-direction: column;   /* 主軸採縱向排版 */
+  flex-wrap: wrap;
+  position: relative;       /* 以提供lightbox定位 */
+}
+header {
+  width: 320px;  height: 300px;
+  display: flex;
+  flex-wrap: wrap;    /* 窄版的需求 */
+  justify-content: end;     /* 使內容靠右 */
+}
+.d-md-none {  display: none;}   /* 大於md則不顯示 */
+.logobar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;   /* 主軸採縱向 */
+  justify-content: end;     /* 使靠下 */
+}
+.logo-all {
+  font-size: 45px;
+  font-weight: bold;
+}
+#logo1 {  color: #fff;}
+#logo2 {  color: #2b8280;}
+#logo3 {  color: #702b82;}
+#logo4 {  color: #ff997c;}
+#logo5 {  color: #827f52;}
+.logo-part {
+  font-size: 35px;
+  color: #fff;
+  /* text-decoration: solid;？？？？？？？？？ */
+}
+a {  text-decoration: none;}  /* 因所有連結字皆不需底線 */
+
+/* -----------------------------------  foot  */
+footer {
+  margin-top: 270px;
+  margin-left: 130px;
+  font-family: 微軟正黑體;
+  color: #827f52;
+  font-size: 16px;
+  font-weight: bold;
+}
+.pic-home {
+  width: 24px;
+  border-radius: 50%;   /* 圓角化 */
+  vertical-align: -15%;   /* 讓圖和字保持對齊 */
+}
+footer > a {    /* 設定連結字屬性 */
+  font-size: 20px;
+  color: #827f52;
+}
+main {
+  width: 704px;  height: 768px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+      /* 採平均對齊 */
+  padding: 110px 60px 110px 20px;    /* 待調整 */
+}
+.iframe {
+  width: 600px;  height: 390px;
+     /* 560+20*2=600 */
+  border: #e7e7e7 20px solid;
+}
+.smPhoto {
+  width: 110px;
+  border: #e7e7e7 5px solid;
+}
+.smPhoto:hover {  border-color: #ff997c;}/* 滑過特效 */
+.smPhoto:active {  border-color: #6cc;} /* 點撃特效 */
+.lightbox {
+  position: absolute;   /* 定位 */
+  z-index: -1;    /* 使暫時隱藏 */
+
+  top: 110px;  left: 352px;     /* 多加功能-好看的變化，若省略，則無法產生位移的效果 */
+
+}
+.lightbox>img {
+  width: 600px;  height: 390px;   /* 也可以設600*390 */
+  border: #e7e7e7 19px solid;   /* 也可以設20 */
+}
+.lightbox:target {
+  z-index: 1;   /* 被點到者 則顯示 */
+  transition: 0.5s;     /* 多加功能-好看的變化 */
+}
+/* -----------------------------------  @media */
+@media (max-width: 767px) {
+  .content,  header,  main {
+    width: 700px;
+  }
+  .content {  height: 1024px;  }
+  .d-md-none {  display: block;}  /* 大於md才隱藏 */
+  .d-md-show {  display: none;}   /* 大於md才顯現 */
+  .pic-bird {
+    width: 230px;  height: 230px;
+  }
+  .pic-cam {
+    width: 50px;  height: 50px;
+  }
+  header {
+    justify-content: space-evenly;
+    padding: 34px;
+  }
+  .logobar {
+    justify-content: space-between;
+  }
+  main {
+    height: 624px;
+    padding: 18px 70px;
+    justify-content: space-between;
+  }
+  footer {
+    margin: 0 80px;
+    order: 1;
+  }
+  .smPhoto {  width: 240px;  }
+  .lightbox {
+    background-color: #00000099;  /* 以透明底色使背景變暗 */
+    width: 100%;  height: 100%;   /* 產生滿版的透明底色 */
+    position: fixed;  /* 為了置中，改以視窗作定位基準點 */
+    top: 0;
+    left: 0;
+    display: flex;  /* 以flex方式來進行置中 */
+    flex-direction: column; /* 為了使「X」置於上方 */
+    justify-content: center;
+    align-items: center;
+  }
+  .lightbox > img {
+    width: 80vw;    /* 依題意，設定圖片寬度 */
+    height: 50vw;
+    border: #e7e7e7 5px solid;
+  }
+  .btn {
+    width: 80vw;    /* 依題意，設定圖片寬度 */
+    text-align: right;
+    color:ghostwhite;
+  }
+}

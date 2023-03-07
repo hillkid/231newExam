@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <title> </title>
+  <style>
+    .shape-ex2 {
+      width: 150px;
+      height: 150px;
+      max-width: 100%;
+      display: block;
+      text-align: center;
+      background-color: #eb9700;
+    }
+
+    .shape-ex2-block {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      background-color: #000;
+      /*為展示區域上色，使用代碼時請自行刪除*/
+    }
+
+    .shape-ex2:before {
+      content: '';
+      width: 10px;
+      /*為展示區域加寬，使用代碼時請改成0*/
+      height: 100%;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      background-color: #006cff;
+      /*為展示區域上色，使用代碼時請自行刪除*/
+    }
+
+    .shape-ex29999:after {
+      content: '';
+      /* width: 10px; */
+      /*為展示區域加寬，使用代碼時請改成0*/
+      height: 100%;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      background-color: #006cff;
+      /*為展示區域上色，使用代碼時請自行刪除*/
+    }
+
+    .shape-ex6 {
+      width: 150px;
+      height: 150px;
+      max-width: 100%;
+      display: block;
+      background-color: #eb9700;
+      position: relative;
+      font-size: 0;
+    }
+
+    .shape-ex6-block {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      text-align: center;
+    }
+
+    .shape-ex6-block:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      width: 0;
+      vertical-align: middle;
+    }
+
+    .shape-ex6-img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      display: inline-block;
+      vertical-align: middle;
+      /* width: 40px; */
+      /*為展示區域顯示，使用代碼時請自行刪除*/
+      /* height: 40px; */
+      /*為展示區域顯示，使用代碼時請自行刪除*/
+      background-color: #000;
+      /*為展示區域上色，使用代碼時請自行刪除*/
+    }
+  </style>
+</head>
+
+<body>
+  <div class="shape-ex2">
+    <div class="shape-ex2-block"></div>
+  </div>
+
+  <div class="shape-ex6">
+    <div class="shape-ex6-block">
+      <img src="https://source.unsplash.com/random" class="shape-ex6-img" />
+    </div>
+  </div>
+
+</body>
+
+</html>

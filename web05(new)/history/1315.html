@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <link rel="stylesheet" href="../css/bootstrap.css"> -->
+  <title> </title>
+  <style>
+    body {
+      background-color: gray;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background-color: aliceblue;
+    }
+
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background-color: aquamarine;
+      /* border: 1px solid black; */
+      text-align: center;
+      line-height: 100px;
+    }
+
+    .pad1 {
+      padding: 30px;
+    }
+
+    .bord1 {
+      border: 30px solid yellowgreen;
+    }
+
+    .mar {
+      margin: 30px;
+    }
+
+    section {
+      background-color: bisque;
+      border: 1px solid purple;
+    }
+    .size{
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section>
+      <div class="box1">content</div>
+    </section>
+    <section>
+      <div class="box1 pad1">padding</div>
+    </section>
+    <!-- <section>
+      <div class="box1 bord1">border</div>
+    </section> -->
+
+    <section>
+      <div class="box1 pad1 bord1">bor含pad+</div>
+    </section>
+    <section>
+      <div class="box1 pad1 bord1 mar">ma含左</div>
+    </section>
+    <section>
+      <div class="box1 pad1 bord1 mar size">pa+bo+size</div>
+    </section>
+
+  </main>
+</body>
+
+</html>

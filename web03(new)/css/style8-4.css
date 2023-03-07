@@ -1,0 +1,63 @@
+body * {
+  box-sizing: border-box;     /* 使 box 空間計算上不易受影響 */
+  box-shadow: 0 0 5px black;
+         /* 以便觀察各區塊的排版 */
+}
+.content{
+  width: 1024px;  height: 650px;   /* 設定外層容器的寬高 */
+  margin:0 auto;                    /* 設定成置中對齊 */
+  background-image: url(../images/park.jpg);  /* 放置背景圖 */
+  background-size: 1024px;
+  background-repeat: no-repeat;
+  display: flex;        /* 以flex方式進行排版 */
+  flex-wrap: wrap;
+  align-items: start;     /* 將子元素高度設成其自身高度，並靠上對齊 */
+}
+.taiwan{
+  margin-left: 30px;
+  margin-top: 100px;
+  width: 280px;  height: 90px;
+}
+.taiwan:hover{
+  background-color: rgba(225, 238, 150, 0.2);
+}
+.main{
+  display: flex;      /* 將容器內的4個區塊以flex排列 */
+  margin-top: 80px;
+  margin-left: 45px;
+  box-shadow: 0 0 40px palegreen, 0 0 40px palegreen, 0 0 40px palegreen;
+}
+#pic1,#pic2,#pic3,#pic4{      /* 設定四張圖片的屬性 */
+  border: 6px solid white;    /* 設定邊框 */
+  box-shadow: 0 0 10px black; /* 陰影 */
+  width: 145px;
+  margin: 0 7px;             /* 左右外距需相等，以便文字置中 */
+}
+.main>a{
+  color: black;     /* 所屬文字改成黑色 */
+  text-shadow:0 0 5px white,0 0 5px white;/* 重覆以加深白色陰影的效果 */
+  position: relative; /* 設定為相對位置，以便子元素能進行定位 */
+  box-shadow: 0 0 20px red;
+}
+.park-name{
+  font-size: 40px;
+  font-weight: bold;
+  width: 40px;        /* 將寬度設成40，強迫每個字都進行換行 */
+  position: absolute; /* 以父元素作基準進行絕對位置的調整 */
+  top: 50%;           /* 將定位點往下推到一半處 */
+  left: 50%;          /* 再往右推一半，使定位點設在中心處 */
+  transform: translate(-50%, -50%);   /* 將文字區塊以本身的大小，從定位點往回校正 */
+}
+#pic1:hover {border: 6px solid greenyellow;} /* 滑鼠滑過特效 */
+#pic2:hover {border: 6px solid yellow;}
+#pic3:hover {border: 6px solid red;}
+#pic4:hover {border: 6px solid cyan;}
+.main>a:hover {
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+footer{
+  margin: 10px auto;
+  font-family: 微軟正黑體;
+  font-size: 16px;
+}

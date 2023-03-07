@@ -1,0 +1,119 @@
+.wrap,header,.logobar,main{
+  display: flex;flex-wrap: wrap;
+  /* border: purple 1px solid; */
+}
+body{background-color: #E7E7E7;}
+.wrap{
+  width: 1024px; 
+  height: 768px;
+  flex-direction: column;
+  background-image:linear-gradient(#6cc,#6cc) ;
+  background-repeat: repeat-x;
+  background-size: 100px 300px;
+  position: relative;
+}
+header{
+  width: 320px; height: 300px;
+  justify-content: end;
+}
+.pic1{width: 230px;height: 230px;}
+.pic2{width: 50px;height: 50px;}
+.logobar{
+  flex-direction: column;
+  justify-content: end;
+}
+h3{
+  font-size: 45px;
+  font-weight: bold;
+}
+h4{font-size: 35px;}
+h4,#logo1{color: #fff;}
+#logo2{color: #2B8280;}
+#logo3{color: #702B82;}
+#logo4{color: #FF997C;}
+#logo5{color: #827F52;}
+a{text-decoration: none;}
+/* -----------------------------------  foot  */
+footer{
+  margin-top: 270px;
+  margin-left: 130px;
+  font-family: 微軟正黑體;
+  color: #827F52;
+  font-size: 16px;
+  font-weight: bold;
+}
+.pic_home{
+  width: 24px;
+  vertical-align:-15%;
+}
+footer>a{
+  font-size: 20px;
+  color: #827F52;
+}
+/* -----------------------------------  main */
+main{
+  width: 704px;  height: 768px;
+  justify-content: space-evenly;
+  padding: 110px 60px 110px 20px;
+}
+.iframe{
+  width: 600px; height: 390px;
+  border: #E7E7E7 20px solid;
+}
+.smPhoto{
+  width: 110px;
+  border: #E7E7E7 5px solid;
+}
+.smPhoto:hover{border-color: #FF997C;}
+.lightbox {
+  position: absolute;
+  top: 131px;
+  left: 372px;
+  z-index: -1;
+}
+.lightbox:target {
+  z-index: 1;
+  transition: 0.5s;
+}
+button.btn-close{
+  display: none;
+  background-color:darkgray;
+}
+/* -----------------------------------  @media */
+@media(max-width:767px) {
+  .wrap,header,main { width: 700px;}
+  .wrap { height: 1020px;}
+  header{
+    justify-content: space-evenly;
+    padding: 34px;
+  }
+  .logobar{justify-content: space-between;}
+  footer{
+    order: 1;
+    margin: 0 80px;
+  }
+  main{
+    height: 620px;
+    justify-content: space-between;
+    padding: 18px 70px;
+  }
+  .d__none{display: none;}
+  .smPhoto{width: 240px;}
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000099;
+  }
+  .lightbox>img{
+    width: 80vw;
+    border: #E7E7E7 5px solid;
+  }
+  button.btn-close{display:block;}
+}

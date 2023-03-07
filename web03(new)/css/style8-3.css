@@ -1,0 +1,75 @@
+body * {
+  box-sizing: border-box;     /* 使 box 空間計算上不易受影響 */
+  box-shadow: 0 0 5px black;
+         /* 以便觀察各區塊的排版 */
+}
+.content{
+  width: 1024px;  height: 650px;   /* 設定外層容器的寬高 */
+  margin:0 auto;                    /* 設定成置中對齊 */
+  background-image: url(../images/park.jpg);  /* 放置背景圖 */
+  background-size: 1024px;
+  background-repeat: no-repeat;
+  display: flex;        /* 以flex方式進行排版 */
+  flex-wrap: wrap;
+  /* align-items: start; */
+     /* 將子元素高度設成其自身高度，並靠上對齊 */
+  flex: auto;
+  /* flex item 不延伸與收縮，依 width 或 height (視主軸 main axis 而定)屬性決定其尺寸 */
+}
+.taiwan{
+  width: 280px;  height: 100px;
+  margin-left: 30px;
+  margin-top: 90px;
+}
+.taiwan:hover{
+  background-color: rgba(225, 238, 150, 0.2);
+}
+#pic1,#pic2,#pic3,#pic4{      /* 設定四張圖片的屬性 */
+  width: 136px;
+  border: 6px solid white;    /* 設定邊框 */
+  box-shadow: 0 0 10px black; /* 陰影 */
+  margin: 0 7px;                /* 左右外距 */
+}
+.main{
+  margin-top: 75px;
+  margin-left: 40px;
+  display: flex;      /* 將容器內的4個區塊以flex排列 */
+  /* flex: none; */
+  box-shadow: 0 0 40px palegreen, 0 0 40px palegreen, 0 0 40px palegreen;
+}
+.main>a{
+  box-shadow: 0 0 20px red;
+  position: relative; /* 設定為相對位置，以便子元素能進行定位 */
+  /* display: block; */
+       /* 將每個<a>從行內元素改成區塊元素 */
+  color: black;     /* 所屬文字改成黑色 */
+}
+.park-name{
+  position: absolute; /* 以父元素作基準進行絕對位置的調整 */
+  top: 50%;           /* 將定位點往下推到一半處 */
+  left: 50%;          /* 再往右推一半，使定位點設在中心處 */
+  transform: translate(-50%, -50%);   /* 將文字區塊以本身的大小，從定位點往回校正 */
+  font-size: 40px;
+  font-weight: bold;
+  width: 40px;        /* 將寬度設成40，強迫每個字都進行換行 */
+  /* text-shadow: 0 0 5px white, 0 0 5px white, 0 0 5px white; */
+}
+#pic1:hover{border: 6px yellowgreen solid;}
+#pic2:hover{border: 6px yellow solid;}
+#pic3:hover{border: 6px red solid;}
+#pic4:hover{border: 6px skyblue solid;}
+.main>a{
+  color: black;
+  text-shadow: 0 0 5px white, 0 0 5px white, 0 0 5px white;
+  /* 重覆以加深白色陰影的效果 */
+  background-color:bisque;
+}
+.main>a:hover{
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+footer{
+  margin: 10px auto;
+  font-family: 微軟正黑體;
+  font-size: 16px;
+}
