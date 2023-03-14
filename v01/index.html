@@ -9,11 +9,11 @@
   #p1 {background-image: url(./v01image/marnie00.jpg);}
   #p2 {background-image: url(./v01image/marnie02.jpg);}
   #p3 {background-image: url(./v01image/marnie03.jpg);}
-  #p4 {background-image: url(./v01image/marnie04.jpg);}
-  #p5 {background-image: url(./v01image/marnie05.jpg);}
-  #p1{
-    background-position:right;
-  }
+  #p4 {background-image: url(./v01image/marnie11.jpg);}
+  #p5 {background-image: url(./v01image/marnie04.jpg);}
+  #p6 {background-image: url(./v01image/marnie10.jpg);}
+  #p1{background-position:right;}
+  #p6{background-position:left;}
   article{
     width: 1038px;
     height: 100vh;
@@ -28,7 +28,7 @@
       flex 2s cubic-bezier(0.61,-0.19, 0.7,-0.11);
   }
   .open{
-    flex-grow: 5;
+    flex-grow: 6;
   }
 </style>
 </head>
@@ -47,6 +47,9 @@
   
 </article>
 <article  :class="classObject" @click="displayOpen" id="p5">
+  
+</article>
+<article  :class="classObject" @click="displayOpen" id="p6">
   
 </article>
 
